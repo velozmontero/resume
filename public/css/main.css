@@ -1,0 +1,75 @@
+body {
+  margin: 0;
+  font-family: 'Montserrat', sans-serif;
+  color: #000;
+}
+
+input, button {
+  outline: none;
+}
+
+input {
+  width: 400px;
+}
+
+input:focus {
+  border: 2px solid #77E3C3;
+}
+
+button {
+  width: 442px;
+  background-color: rgba(0, 0, 0, 0);
+  border: 2px solid #77E3C3;
+  transition: transform 450ms;
+  color: #000;
+}
+
+button:hover {
+  cursor: pointer;
+  border: 1px solid #77E3C3;
+  background-color: #77E3C3;
+  color: #fff;
+  transform: scale(1.03);
+}
+
+.icon {
+  margin-bottom: 50px;
+}
+
+.container {
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: row;
+  flex-wrap: wrap;
+}
+
+.wallper {
+  background-image: url(https://d2ue93q3u507c2.cloudfront.net/assets/generated_assets/94977d34f99015525dcd0fc9987fcbe6.png);
+  background-size: cover;
+  width: 100%;
+  height: 100%;
+  flex: 1;
+}
+
+.form-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  flex: 1;
+  height: 100%;
+}
+
+.form-element {
+  padding: 0px 20px;
+  margin: 10px;
+  height: 70px;
+  font-size: 18px;
+}
+
+.message {
+  padding: 20px 0px;
+  height: 30px;
+}
