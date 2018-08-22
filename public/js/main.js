@@ -6,7 +6,7 @@ btn.onclick = function(e) {
   btn.setAttribute("disabled", true);
   document.getElementById('message').innerHTML = 'Sending email...';
 
-  fetch('http://localhost:8000/email-resume', {
+  fetch('http://142.93.207.204:8000/email-resume', {
     method: 'POST',
     headers: {
       'Accept': 'application/json',
