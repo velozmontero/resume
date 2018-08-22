@@ -85,7 +85,7 @@ function(req, res, next){
 function(req, res, next) {
   // console.log(req.body);
 
-  var emailBody = fs.readFileSync('./resume-dark.html');
+  var emailBody = fs.readFileSync('./public/resume-dark.html');
 
   var mailOptions = {
     from: req.body.from,
