@@ -22,9 +22,12 @@ app.use(express.json());
 //Purpose of this is to enable cross domain requests
 // Add headers
 app.use(function (req, res, next) {
-
   // Website you wish to allow to connect
-  res.setHeader('Access-Control-Allow-Origin', ['http://fveloz.techlaunch.io:8000', 'http://142.93.207.204:8000']);
+  var allowedOrigins = ['http://fveloz.techlaunch.io:8000', 'http://142.93.207.204:8000'];
+  var origin = req.headers.origin;
+  if (allowedOrigins.indexOf(origin) > -1) {
+    res.setHeader('Access-Control-Allow-Origin', origin);
+  }
 
   // Request methods you wish to allow
   res.setHeader('Access-Control-Allow-Methods', 'GET, POST, OPTIONS, PUT, PATCH, DELETE');
