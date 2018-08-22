@@ -3,6 +3,9 @@ const btn = document.getElementById('send');
 btn.onclick = function(e) {
   e.preventDefault();
 
+  btn.setAttribute("disabled", true);
+  document.getElementById('message').innerHTML = 'Sending email...';
+
   fetch('http://localhost:8000/email-resume', {
     method: 'POST',
     headers: {
@@ -19,8 +22,11 @@ btn.onclick = function(e) {
   .then(result => result.json())
   .then(result => {
     document.getElementById('message').innerHTML = result.message;
+    btn.removeAttribute("disabled");
+    document.getElementById("form").reset();
   })
   .catch(err => {
     document.getElementById('message').innerHTML = err.message;
+    btn.removeAttribute("disabled");
   });
 }
